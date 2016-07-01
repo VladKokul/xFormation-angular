@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="ngFormation">
+<head>
+	<title>Formation</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body >
+<div id="space">
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+  <div class="stars"></div>
+</div>
+
+<div class="container main-wrap">
+  <table class="table table-hover" ng-controller="contributorsController">
+   <h3 class="text-center">Contributors</h3>
+    <thead>
+      <tr>
+        <th>Nickname</th>
+        <th>Team</th>
+        <th>Contributors</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="contributor in contributors | orderBy : '-contributions'">
+        <td>{{contributor.nickname}}</td>
+        <td>{{contributor.team}}</td>
+        <td>{{contributor.contributions}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-hover" ng-controller="githubController">
+  <h3 class="text-center">Github repo's</h3>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Forks</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="github in github | orderBy : '-forks'">
+        <td>{{github.name}}</td>
+        <td>{{github.description}}</td>
+        <td>{{github.forks}}</td>
+        <td><a href="{{github.html_url}}" target="_blank"><img src="img/Github-Mark.png"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="controllers/contributorsController.js"></script>
+<script src="factories/contributorsFactory.js"></script>
+<script src="controllers/githubController.js"></script>
+<script src="factories/githubFactory.js"></script>
+
+</html>
