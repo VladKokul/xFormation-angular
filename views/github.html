@@ -1,0 +1,31 @@
+<div class="container main-wrap" ng-controller="githubController">
+  <table class="table table-hover" >
+  <h3 class="text-center">Github repo's</h3>
+    <thead>
+      <tr>
+        <th>
+          <a ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            Name
+            </a>
+        </th>
+        <th>
+        <a ng-click="sortType = 'description'; sortReverse = !sortReverse">
+        Description
+        </a>
+        </th>
+        <th>
+         <a ng-click="sortType = 'forks'; sortReverse = !sortReverse">Forks
+         </a></th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="github in github | orderBy:sortType:sortReverse">
+        <td>{{github.name}}</td>
+        <td>{{github.description}}</td>
+        <td>{{github.forks}}</td>
+        <td><a href="{{github.html_url}}" target="_blank"><img src="img/Github-Mark.png"></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

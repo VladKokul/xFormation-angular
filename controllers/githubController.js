@@ -1,5 +1,6 @@
-angular.module('ngFormation').controller('githubController', function($scope, githubFactory){
-			
+
+app.controller('githubController', function($scope, githubFactory) {
+
 		 	$scope.github;
 
 		 	githubFactory.getGithub().success(function(data){

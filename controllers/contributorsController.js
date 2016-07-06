@@ -1,8 +1,5 @@
-	angular.module('ngFormation')
-
-.controller('contributorsController', function($scope, contributorsFactory) {
-  $scope.sortType     = 'name'; 
-  $scope.sortReverse  = false;  
+app.controller('contributorsController', function($scope, contributorsFactory) {
+  
   
 	$scope.contributors;
 

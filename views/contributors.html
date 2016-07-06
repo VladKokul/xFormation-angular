@@ -1,0 +1,34 @@
+<div class="container main-wrap" >
+  <table class="table table-hover" ng-controller="contributorsController">
+   <h3 class="text-center">Contributors</h3>
+    <thead>
+      <tr>
+        <th>
+          <a ng-click="sortType = 'nickname'; sortReverse = !sortReverse">
+            Nickname
+         
+          </a>
+        </th>
+        <th>
+          <a ng-click="sortType = 'team'; sortReverse = !sortReverse">
+          Team
+        
+          </a>
+        </th>
+        <th>
+          <a ng-click="sortType = 'contributions'; sortReverse = !sortReverse">
+          Contributions
+          </a>
+        </th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr ng-repeat="contributor in contributors | orderBy:sortType:sortReverse">
+        <td>{{contributor.nickname}}</td>
+        <td>{{contributor.team}}</td>
+        <td>{{contributor.contributions}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

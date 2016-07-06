@@ -1,4 +1,4 @@
-angular.module('ngFormation').factory('contributorsFactory', function($http){
+app.factory('contributorsFactory', function($http){
 
 			function getContributors() {
 				return $http.get('json/contributors.json');
