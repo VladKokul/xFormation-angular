@@ -1,43 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="ngFormation">
 <head>
-	<title>Formation</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Formation</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body >
+<body>
 <div id="space">
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
-  <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
 </div>
-
-
-
-<div class="text-center">
-
-<a href="#/">Index</a>
-<a href="#github">github</a>
-<a href="#contributors">contributors</a>
+<div class="text-center navigation">
+    <a href="#/">Home</a>
+    <a href="#github">github</a>
+    <a href="#contributors">contributors</a>
 </div>
 <div ng-view></div>
-
-
-
-
 </body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
-
-
 <script src="app.js"></script>
 <script src="factories/contributorsFactory.js"></script>
 <script src="factories/githubFactory.js"></script>
 <script src="controllers/contributorsController.js"></script>
 <script src="controllers/githubController.js"></script>
-
-
 </html>

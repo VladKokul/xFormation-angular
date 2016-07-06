@@ -1,12 +1,8 @@
-app.controller('contributorsController', function($scope, contributorsFactory) {
-  
-  
-	$scope.contributors;
-
-		 	contributorsFactory.getContributors().success(function(data){
-		 		$scope.contributors = data;
-		 	}).error(function(error){
-		 		console.log(error);
-		 	});
-  
+app.controller('contributorsController', function ($scope, contributorsFactory) {
+  $scope.contributors;
+  contributorsFactory.getContributors().success(function (data) {
+    $scope.contributors = data;
+  }).error(function (error) {
+    console.log(error);
+  });
 });
